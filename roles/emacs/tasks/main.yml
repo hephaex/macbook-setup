@@ -1,14 +1,14 @@
 ---
 - name: Cloning emacs config from github 
   git:
-    repo: 'https://github.com/xyloon/emacs_config.git'
+    repo: 'https://github.com/hephaex/emacs_config.git'
     dest: ~/github/emacs_config
     clone: yes
     update: yes
 
 - name: Making simbolic link for emacs
   file:
-    src: '~/github/emacs_config/.emacs.d'
+    src: '~/Simon/github/emacs_config/.emacs.d'
     dest: '~/.emacs.d'
     state: link
 
@@ -32,6 +32,6 @@
 
 - name: Installing python related packages
   pip:
-    requirements: ~/github/emacs_config/python_debug.txt
+    requirements: ~/Simon/github/emacs_config/python_debug.txt
     executable: pip3
 
